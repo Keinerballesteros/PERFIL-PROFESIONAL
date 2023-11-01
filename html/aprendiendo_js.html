@@ -7,7 +7,7 @@
     <title>aprendiendo js</title>
     <script src="../js/functions.js"></script>
 </head>
-<body>
+<body onload="load_page()">
     
     
     <label for=""  id="box_one"></label>
@@ -19,5 +19,16 @@
         console.log("Bienvenido");
          
     </script>
+    <input type="text" id="box_onblur" onblur="box_onblur()" placeholder="Escriba algo aquí" size="30">
+    <button id="change_color">CAMBIAR COLOR</button>
+    <form id="form_register">
+        <label for="nombres">Nombres</label>
+        <input type="text" id="nombres" size="30" placeholder="Ingrese Nombres"><br>
+        <label for="apellidos">Nombres</label>
+        <input type="text" id="apellidos" size="30" placeholder="Ingrese Apellidos"><br>
+
+        <button type="submit">REGISTER</button><br>
+        <button type="reset">LIMPIAR</button>
+    </form>
 </body>
 </html>

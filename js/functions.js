@@ -1,3 +1,4 @@
+/*
 console.log("prueba de enlazamiento");
 //tipo de variable
 
@@ -43,7 +44,7 @@ Swal.fire({
 }
     
   )
-  */
+  
  // Swal.fire(name);
 
  //tipos de datos
@@ -113,3 +114,91 @@ Swal.fire({
     html:respuesta
 }
 );
+*/
+// OPERADORES LÓGICOS
+// AND && con if
+let array_text =["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
+var bool = false;
+var numeric ="7";
+if(bool && numeric ===7){
+    console.log("ENTRA IF");
+}
+else{
+    console.log("ENTRA ELSE");
+}
+//OR || con if
+var age = "31";
+if(age == 32 || numeric ===7){
+    console.log("Entra en if");
+}
+else{
+    console.log("entra en else");
+    age--;
+}
+console.log(age);
+
+//                              FOR
+var size = array_text.length;
+for(let i = 0; i<size ;i++){
+    console.log(array_text[i]+[i+1]);
+}
+
+// WHILE
+let position = 0;
+while(position<array_text.length){
+    console.log(array_text[position]+[position+1]);
+    position++;
+}
+// DO WHILE
+let w= 0;
+do {
+    console.log(array_text[w]+[w+1]);
+    w++;
+} while(w<array_text.length);
+
+// FUNCIONES Y EVENTOS
+
+/*function load_page(){
+    alert("BIENVENIDO");
+    ejm2;
+}
+*/
+function ejm (){
+    alert("Bienvenido");
+}
+function ejm2(){
+    alert("Bienvenido2");
+}
+
+function box_onblur(){
+    const box_onblur = document.querySelector("#box_onblur");
+    if(box_onblur.value.length<=2){
+        alert="PROBLEMA"
+    }
+}
+const btn_changeColor = document.querySelector("#change_color")
+
+btn_changeColor.addEventListener("click",()=>{
+    document.body.style.backgroundColor = "red";
+    document.body.style.color = "#fff";
+});
+const form = document.queryElementById("form_register")
+const nombres = document.queryElementById("nombres")
+const apellidos = document.queryElementById("apellidos")
+const validation = document.queryElementById("validation")
+
+form.addEventListener("submit", name_event =>{
+    name_event.prevenDefault();
+
+    let="info";
+    if(nombres.value.length<=2 || apellidos.value.length<=2){
+        info += "nombres o apellidos incorrectos";
+        validation.style.color = "red";
+    }
+    else{
+        info += "su nombre es: "+nombres.value + " "+"Su apellido es: "+apellidos.value
+        validation.style.color = "green";
+    }
+    validation.innerText = info;
+})
+
