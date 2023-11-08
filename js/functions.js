@@ -32,7 +32,7 @@ document.write(name);
 // document.getElementById("box_two").innerText = "<h1> Keiner Ballesteros</h1>";
 
 //librerias
-/*
+
 Swal.fire({
     icon:'info',
     title: 'Keiner Ballesteros',
@@ -58,18 +58,19 @@ Swal.fire({
 
  //booleanos
  var boolean = true; //false
-
- //array
+*/
+ array
 
  let array =[1,5,7];
- let array_text =["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
+ //let array_text =["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
  let array_mix =[ 1, "as",2,true];
- let array_nul =[
+ let array_mul =[
     {name:"Keiner", last_name: "Ballesteros",age: "17"},
     {name:"Pedro", last_name:"Miguel",age: "20"},
     {name:"juan", last_name:"martinez",age: "15"},
     {name:"maria", last_name:"perez",age: "21"}
  ];
+ /*
  //*****  Operadores basicos
  //suma
  var suma = number+number_two;
@@ -114,7 +115,7 @@ Swal.fire({
     html:respuesta
 }
 );
-*/
+
 // OPERADORES LÓGICOS
 // AND && con if
 let array_text =["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
@@ -155,14 +156,19 @@ do {
     console.log(array_text[w]+[w+1]);
     w++;
 } while(w<array_text.length);
-
+*/
 // FUNCIONES Y EVENTOS
 
-/*function load_page(){
-    alert("BIENVENIDO");
-    ejm2;
+function load_page(){
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new Date();
+    console.log(date.getSeconds());
+    for(let i=0; i<array_mul.length;i++){
+        console.log(array_mul[i].name);
+    }
 }
-*/
+
 function ejm (){
     alert("Bienvenido");
 }
@@ -201,4 +207,15 @@ form.addEventListener("submit", name_event =>{
     }
     validation.innerText = info;
 })
+function validate(){
+    let nombre = document.getElementById("nombres").value
+    console.log(nombre);
+    alert(nombres.split(" "))
+    if(nombre.length > 2){
+        document.getElementById("apellidos").disabled = false;
+        document.getElementById("apellidos").focus();
+        document.getElementById("nombres").value = "";
+        
+    }
+}
 
